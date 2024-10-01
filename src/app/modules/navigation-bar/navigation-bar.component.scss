@@ -3,10 +3,52 @@ app-main-menu{
 }
 
 .navigation-bar{
+    display: flex;
+    height: 64px;
+    align-items: center;
+    border-bottom: solid 2px var(--main-accent-color);
     background-color: var(--navigation-bar-background-color);
     color: var(--main-text-color);
+    
 }
 
-h1{
+.floor-link{
     display: inline-block;
+
+    &:hover{
+        color: var(--highlighted-text-color);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.main-303-link{
+    display: inline-block;
+    margin-left: 30px;
+    outline: solid 2px var(--main-text-color);
+    outline-offset: -2px;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    &:hover{
+        color: var(--highlighted-text-color);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.link-text{
+    width: auto;
+    height: 1em;
+    margin: 0;
+    font-size: 28pt;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 600px) {
+    .link-text{
+        font-size: 14pt;
+    }
+
+
 }

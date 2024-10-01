@@ -1,0 +1,47 @@
+*{
+    color: var(--main-text-color);
+}
+
+
+.button-container{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .main-button{
+        display: block;
+        width: 150px;
+        height: 50px;
+        background-color: var(--main-accent-color);
+        border-top: 2px solid var(--lighter-accent-color);
+        border-left: 2px solid var(--lighter-accent-color);
+        border-bottom: 2px solid var(--darker-accent-color);
+        border-right: 2px solid var(--darker-accent-color);
+
+        &:active{
+            border-top-color: var(--darker-accent-color);
+            border-left-color: var(--darker-accent-color);
+            border-bottom-color: var(--lighter-accent-color);
+            border-right-color: var(--lighter-accent-color);
+        }
+    }
+}
+
+.reset-button{ 
+    padding: 5px;
+    border: solid 1px var(--lighter-accent-color);
+    background-color: var(--main-accent-color);
+}
+
+.click-game{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10%;
+}
+
+.is-cheating{
+    color: red;
+}

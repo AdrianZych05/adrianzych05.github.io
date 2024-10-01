@@ -1,0 +1,65 @@
+
+.menu-button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 0 5px;
+    padding: 0;
+    background-color: var(--navigation-bar-background-color);
+    border: none;
+
+    &:hover, &:active{
+        outline: solid 2px var(--main-accent-color);
+        outline-offset: -8px;
+        cursor: pointer;
+    }
+}
+
+.menu {
+    display: flex;
+    position: absolute;
+    height: 0;
+    max-height: fit-content;
+    flex-direction: column;
+    background-color: var(--navigation-bar-background-color);
+    color: var(--main-text-color);
+    font-weight: bold;
+
+    overflow: hidden;
+
+    transition: height 0.5s ease;
+
+    .menu-content{
+        width: 150px;
+        margin: 5px; 
+        padding: 3px;
+        background-color: var(--navigation-bar-background-color);
+        text-align: left;
+        font-size: 16px;
+        color: var(--main-text-color);
+        border: none;
+
+        &:hover, &:active{
+            color: var(--highlighted-text-color);
+            border-radius: 2px;
+            border: solid 2px var(--main-accent-color);
+            cursor: pointer;
+        }
+    }
+
+    .is-current-link{
+        color: var(--highlighted-text-color);
+        text-decoration: underline;
+        text-decoration-color: var(--highlighted-text-color);
+    }
+}
+
+
+
+.menu-image{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+}

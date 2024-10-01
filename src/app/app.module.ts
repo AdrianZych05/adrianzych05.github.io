@@ -9,15 +9,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { MainMenu } from './modules/main-menu/main-menu.component';
+import { MainMenu } from './modules/navigation-bar/main-menu/main-menu.component';
 import { NavigationBar } from './modules/navigation-bar/navigation-bar.component';
+import { Main303 } from './modules/303/main-303.component';
+import { HomeScreen } from './modules/home-screen/home-screen.component';
+import { ClickGame } from './modules/other-pages/click-game/click-game.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainMenu,
-    NavigationBar
+    NavigationBar,
+    Main303,
+    HomeScreen,
+    ClickGame
   ],
   imports: [
     BrowserModule,

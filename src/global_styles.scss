@@ -6,12 +6,50 @@ body, html{
     margin: 0;
     padding: 0;
     background-color: var(--body-background-color);
+    touch-action: manipulation;
+}
+
+.nice-shine{
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+  transform: translate(-50%,-50%);
+//   padding: 12px 48px;
+  color: cyan;
+  background: linear-gradient(to right, black, var(--main-text-color) 40%, black 80%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: 0, 0, 5px, var(--main-accent-color);
+}  
+
+@keyframes shine{
+    0%{
+        background-position: 0px;
+    }
+    
+    100%{
+        background-position: 24px;
+    }
 }
 
 @media (prefers-color-scheme: dark){
     :root{
         --body-background-color: #333;
-        --main-text-color: #fff;
+        --main-text-color: #F9DBED;
+
+        --main-accent-color: #631D76;
+        --darker-accent-color: #4E1559;
+        --lighter-accent-color: #A76BC0;
+
+        --highlighted-text-color: #d03391;
 
         --navigation-bar-background-color: #555;
     }
@@ -19,9 +57,21 @@ body, html{
 
 @media (prefers-color-scheme: light){
     :root{
-        --body-background-color: #333;
-        --main-text-color: #fff;
-        
-        --navigation-bar-background-color: #555;
+        --body-background-color: #F9DBED;
+        --main-text-color: #1A1A80;
+
+        --main-accent-color: #631D76;
+        --darker-accent-color: #4E1559;
+        --lighter-accent-color: #A76BC0;
+
+        --highlighted-text-color: #d03391;
+
+        --navigation-bar-background-color: #F9DBED;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 14pt;
     }
 }

@@ -1,0 +1,31 @@
+*{
+    color: var(--main-text-color);
+}
+
+.room303{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10%;
+}
+
+.ascii-letter {
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+.ascii-303{
+    display: flex;
+    margin: 0;
+}
+
+.image{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .ascii-303{
+        left: 0;
+    }
+}

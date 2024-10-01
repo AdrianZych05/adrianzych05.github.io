@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { LinkService } from "../../core/services/currentLink.service";
 
 @Component({
     selector: 'app-navigation-bar',
@@ -7,5 +8,13 @@ import { Component } from "@angular/core";
   })
 
 export class NavigationBar{
+    constructor(private linkService: LinkService){}
 
+    routeToHome(): void{
+        this.linkService.routeToHome();
+    }
+
+    routeTo303(): void{
+        this.linkService.routeTo303();
+    }
 }

@@ -1,0 +1,23 @@
+<div class="click-game">
+    <p>Hello. If your bored you can click. You can also flex your scores but you better not cheat. <span class="nice-shine">303</span> will know.</p>
+
+    <div class="button-container">
+        <button class="main-button" (click)="addOneClick()">Click</button>
+    </div>
+
+    <div class="button-container">
+        <label><span [ngClass]="{'is-cheating': userCheating, '': !userCheating}">Clicks: {{allClicks}}</span></label>
+    </div>    
+
+    <div class="button-container">
+        <label><span [ngClass]="{'is-cheating': userCheating, '': !userCheating}">Clicks Per Second: {{clicksPerSecond}}</span></label>
+    </div>  
+    
+    <div class="button-container">
+        <button class="reset-button" (click)="reset()">Reset</button>
+    </div>  
+
+    <p>Your progress is saved to your device every second. It is saved to the browser local storage it wont save accross different devices.</p>
+
+
+</div>
